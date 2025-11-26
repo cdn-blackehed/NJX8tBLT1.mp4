@@ -30,24 +30,56 @@
             border-radius: 10px;
             display: block;
         }
+        .ad-banner-inside {
+            position: absolute;
+            top: 0;
+            left: 50%;
+            transform: translateX(-50%);
+            width: 320px;
+            height: 50px;
+            background: rgba(255,255,255,0.92);
+            border-radius: 10px 10px 0 0;
+            box-shadow: 0 2px 8px rgba(0,0,0,0.10);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            z-index: 2;
+            overflow: hidden;
+        }
+        @media (max-width: 400px) {
+            .ad-banner-inside {
+                width: 95vw;
+                height: 40px;
+                font-size: 0.85em;
+            }
+        }
     </style>
 </head>
 
 <body>
 
-<div class="video-title">Auntie tired, but I’m still holdin’ it down.😘😘</div>
+<div class="video-title">
+Auntie tired, but I’m still holdin’ it down.😘😘
+</div>
 
-<!-- FIXED — OBFUSCATED SCRIPT -->
+<!-- OBFUSCATED SCRIPT -->
 <script>
 (function(){
-    const encoded = 
-"YXRDb2RlID0gYCRzY3JpcHQ+CiAgICB2YXIgYXRPcHRpb25zID0gewogICAgICAgIGtleTogJzFhYjcxNzE4YzY4NzhkZGI1NjhlYmRmMmI5OTA4YWEzJywKICAgICAgICBmb3JtYXQ6ICdpZnJhbWUnLAogICAgICAgIGhlaWdodDogNjAsCiAgICAgICAgd2lkdGg6IDQ2OCwKICAgICAgICBwYXJhbXM6IHt9CiAgICB9Owo8L3NjcmlwdD4KPHNjcmlwdCBzcmM9Ii8vcnV0Y29tcG9zdXJlb3B0LmNvbS8xYWI3MTcxOGM2ODc4ZGRiNTY4ZWJkZjJiOTkwOGFhMy9pbnZva2UuanMiPjwvc2NyaXB0PmA7Cgpkb2N1bWVudC53cml0ZShhdENvZGUpOw==";
+    const encoded =
+"PHNjcmlwdD5hdE9wdGlvbnMgPSB7IGtleTonMWFiNzE3MThjNjg3OGRkYjU2OGViZGYyYjk5MDhhYTMnLGZvcm1hdDon" +
+"aWZyYW1lJyxoZWlnaHQ6NjAsd2lkdGg6NDY4LHBhcmFtczp7fX07PC9zY3JpcHQ+PHNjcmlwdCBzcmM9Ii8vcnV0Y29t" +
+"cG9zdXJlb3B0LmNvbS8xYWI3MTcxOGM2ODc4ZGRiNTY4ZWJkZjJiOTkwOGFhMy9pbnZva2UuanMiPjwvc2NyaXB0Pg==";
 
-    const decoded = atob(encoded);
-    document.write(decoded);
+    const html = atob(encoded);
+
+    const container = document.createElement("div");
+    container.innerHTML = html;
+    document.body.prepend(container);
 })();
 </script>
-<!-- END FIX -->
+
+
+<!-- END OBFUSCATED -->
 
 <br>
 
@@ -87,3 +119,6 @@ hs.src = ('//s10.histats.com/js15_as.js');
 </a>
 </noscript>
 <!-- Histats.com END -->
+
+
+
